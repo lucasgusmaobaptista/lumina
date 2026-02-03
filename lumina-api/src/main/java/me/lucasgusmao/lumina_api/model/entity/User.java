@@ -42,7 +42,7 @@ public class User implements UserDetails {
     @Column(name = "is_active", nullable = false)
     private Boolean isActive;
 
-    @Column(name = "verification_code")
+    @Column(name = "verification_code", unique = true)
     private String verificationCode;
 
     @Column(name = "verification_code_expires_at")
